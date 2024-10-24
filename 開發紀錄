@@ -1,0 +1,24 @@
+1.基本URL 設計
+2.gin router 分流
+3.前端URL 封裝 (MustLogin)
+4.結構體 bind UrL (json、form)
+5.結構體 binding (required gt ls 等等.....)
+6.自訂validator 並且在bind上應用   在註冊時記得前面加 if
+7.接受複數請求:(複數的結構體設計 Users User[] binding:dive)、(HandlerFunc)
+8.Gorm 的基本連結:(結構體 gorm tag)(連接sqlserver)    記的 gorm:"column:id"  還有自動遷移
+9.Gorm映射:接收 json POST請求 到資料庫儲存
+10.儲存多筆json到資料庫  AutoMigrate + err catch    gorm:"primaryKey" 就好 不用加column
+11.設計從資料庫調用數據 單筆 以及 多筆(DB.Find()) handlerfunc
+------------------------------------------------------------------------------------------------------------
+12.設定連接池(控制DB開關來省下資源)(在新版的gorm 已經有自動控制連接池的效果不須手動設定)(有特別需要再手動設定)(可自選是否設定)
+------------------------------------------------------------------------------------------------------------
+13.系統級 error catching 建立APP INIT (裡面包含用chan 監聽os 並且再出重大錯誤時優雅的處理並關閉SERVER)(將router.Run() 取代掉 並做後續處理)
+
+
+
+
+-預計要加上Repository
+-學習go routine
+-學習channel
+
+-菜價資料庫呼叫
